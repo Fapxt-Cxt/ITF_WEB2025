@@ -6,7 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body class="main">
         <nav>
             <p>68070079</p>
             <h2>ITF Website</h2>
@@ -20,59 +20,73 @@
             </high>
         </div>
         <hr>
-        <hed class="container">
-            <h2>Account Overview</h2>
-            <h2>Financial Tools</h2>
-        </hed>
-        <me class="container">
-            <img src="pngtree-cute-kitten-cartoon-png-image_9062557.png" width="130" alt="Cat">
-            <dat>
-                <h3>Account Information</h3>
-                <h8>Name : Napatsawan Kerdkaew</h8><br>
-                <h8>Type : Savings Accout</h8>
-            </dat>  
-            <finan>
-                <img src="sleepcat.png" width="150" alt="Cat">
-                <dat>
-                    <h3>Currency Converter</h3>
-                    <h8>Input balance: </h8><br>
-                    <input type="number" id="in" value="0"><br>
-                    <h8>Output balance: </h8><br>
-                    <input type="number" id="out" value="0"><br>
-                    <h8>Input currency:</h8>
-                    <select name="currency" id="currency">
-                        <option value="USD">USD</option>
-                        <option value="THB">THB</option>
-                    </select>
-                    <button type="button" onclick="add(this.innerText)">Convert</button>
-                </dat>
-            </finan>
-        </me>
-        <br>
-        <balan class="container">
-            <img src="fatcat.png" width="130" alt="Cat">
-            <dat>
-                <h3>Balance Information</h3>
-                <h8>Current account balance:</h8><br>
-                <input type="number" id="cash" value="0"><br>
-                <h8>Current cash balance:</h8><br>
-                <input type="number" id="cash" value="0"><br>
-                <button type="button" onclick="add(this.innerText)">Change</button>
-            </dat>
-        </balan>
-        <br>
-        <bank class="container">
-            <img src="mokcat.png" width="150" alt="Cat">
-            <dat>
-                <h3>Bank Operation</h3>
-                <select name="bankoper" id="bankoper">
-                    <option value="Deposit">Deposit</option>
-                    <option value="Withdraw">Withdraw</option>
-                </select>
-                <input type="number" id="oper" value="0"><br>
-                <button type="button" onclick="add(this.innerText)">Proceed</button>
-            </dat>
-        </bank>
+        <text>
+            <textarea id="output" readonly></textarea>
+        </text>
+        <flexgrid>
+            <acc1>
+                <hed class="container">
+                    <h2>Account Overview</h2>
+                </hed>
+                <me class="container">
+                    <img src="pngtree-cute-kitten-cartoon-png-image_9062557.png" width="130" alt="Cat">
+                    <dat>
+                        <h3>Account Information</h3>
+                        <h8>Name : Napatsawan Kerdkaew</h8><br>
+                        <h8>Type : Savings Accout</h8>
+                    </dat>  
+                </me>
+                <br>
+                <balan class="container">
+                    <img src="fatcat.png" width="130" alt="Cat">
+                    <dat>
+                        <h3>Balance Information</h3>
+                        <h8>Current account balance:</h8><br>
+                        <input type="number" id="account" value="0"><br>
+                        <h8>Current cash balance:</h8><br>
+                        <input type="number" id="cash" value="0"><br>
+                        <button type="button" onclick="change()">Change</button>
+                        <script src="script.js"></script>
+                    </dat>
+                </balan>
+                <br>
+                <bank class="container">
+                    <img src="mokcat.png" width="150" alt="Cat">
+                    <dat>
+                        <h3>Bank Operation</h3>
+                        <select name="bankoper" id="bankoper">
+                            <option value="Deposit">Deposit</option>
+                            <option value="Withdraw">Withdraw</option>
+                        </select>
+                        <input type="number" id="oper" value="0"><br>
+                        <button type="button" onclick="proceed()">Proceed</button>
+                        <script src="script.js"></script>
+                    </dat>
+                </bank>
+            </acc1>
+            <acc2>
+                <hed class="container">
+                    <h2>Financial Tools</h2>
+                </hed>
+
+                <finan>
+                    <img src="sleepcat.png" width="150" alt="Cat">
+                    <dat>
+                        <h3>Currency Converter</h3>
+                        <h8>Input balance: </h8><br>
+                        <input type="number" id="in" value="0"><br>
+                        <h8>Output balance: </h8><br>
+                        <input type="number" id="out" value="0"><br>
+                        <h8>Input currency:</h8>
+                        <select name="currency" id="currency">
+                            <option value="USD">USD</option>
+                            <option value="THB">THB</option>
+                        </select>
+                        <button type="button" onclick="add()">Convert</button>
+                    </dat>
+                </finan>
+            </acc2>
+        </flexgrid>
     </body>
     <script src="script.js"></script>
 </html>
