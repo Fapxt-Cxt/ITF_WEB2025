@@ -19,10 +19,22 @@ div {
     display: flex;
 }
 
+hed {
+    display: flex
+}
+
 me {
     display: flex
 }
 
 balan {
+    display: flex
+}
+
+bank {
+    display: flex
+}
+
+finan {
     display: flex
 }
